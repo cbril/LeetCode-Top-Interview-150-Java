@@ -3,4 +3,4 @@ These are Chantalle Bril's solutions to LeetCode's Top Interview 150 problems im
 
 https://leetcode.com/studyplan/top-interview-150/
 
-Each directory is named after the LeetCode problem.
+Each file is named after the LeetCode problem.
