@@ -2,14 +2,12 @@ package bitmanipulation;
 
 import lombok.NoArgsConstructor;
 
-/**
- * 67. Add Binary
- * https://leetcode.com/problems/add-binary
- */
+/** 67. Add Binary https://leetcode.com/problems/add-binary */
 @NoArgsConstructor
 public class AddBinary {
     /**
      * Given two binary strings a and b, return their sum as a binary string.
+     *
      * @param a binary number as a string
      * @param b binary number as a string
      * @return sum of a and b as binary string
@@ -17,8 +15,8 @@ public class AddBinary {
     public String addBinary(String a, String b) {
         // My approach is to do it the way I would do arithmetic on paper
         StringBuilder sb = new StringBuilder();
-        int idxA = a.length()-1;
-        int idxB = b.length()-1;
+        int idxA = a.length() - 1;
+        int idxB = b.length() - 1;
         boolean carryOver = false;
 
         while (idxA >= 0 || idxB >= 0) {

@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("com.diffplug.spotless") version "8.3.0"
 }
 
 java {
@@ -25,4 +26,16 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+spotless {
+    java {
+        googleJavaFormat().aosp()
+        removeUnusedImports()
+        forbidWildcardImports()
+        importOrder()
+        leadingTabsToSpaces()
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
 }

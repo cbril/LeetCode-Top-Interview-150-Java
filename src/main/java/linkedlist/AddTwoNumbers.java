@@ -1,14 +1,15 @@
 package linkedlist;
 
-/**
- * <a href="https://leetcode.com/problems/add-two-numbers/description">2. Add Two Numbers</a>
- */
+/** 2. Add Two Numbers https://leetcode.com/problems/add-two-numbers */
 public class AddTwoNumbers {
 
     /**
      * Returns the sum of the two numbers represented by the linked lists (first attempt)
-     * @param l1 head node of a non-empty linked list representing an integer, with a single digit in each node and integers in reverse order
-     * @param l2 head node of a non-empty linked list representing an integer, with a single digit in each node and integers in reverse order
+     *
+     * @param l1 head node of a non-empty linked list representing an integer, with a single digit
+     *     in each node and integers in reverse order
+     * @param l2 head node of a non-empty linked list representing an integer, with a single digit
+     *     in each node and integers in reverse order
      * @return the sum of the two integers from l1 and l2
      */
     public ListNode addTwoNumbersFirstAttempt(ListNode l1, ListNode l2) {
@@ -36,10 +37,13 @@ public class AddTwoNumbers {
     }
 
     /**
-     * Returns the sum of the two numbers represented by the linked lists.
-     * Second attempt, sum and creating new linked list can be done simultaneously.
-     * @param l1 head node of a non-empty linked list representing an integer, with a single digit in each node and integers in reverse order
-     * @param l2 head node of a non-empty linked list representing an integer, with a single digit in each node and integers in reverse order
+     * Returns the sum of the two numbers represented by the linked lists. Second attempt, sum and
+     * creating new linked list can be done simultaneously.
+     *
+     * @param l1 head node of a non-empty linked list representing an integer, with a single digit
+     *     in each node and integers in reverse order
+     * @param l2 head node of a non-empty linked list representing an integer, with a single digit
+     *     in each node and integers in reverse order
      * @return the sum of the two integers from l1 and l2
      */
     public ListNode addTwoNumbersSecondAttempt(ListNode l1, ListNode l2) {
@@ -103,18 +107,36 @@ public class AddTwoNumbers {
         int num2 = 0;
         ListNode list1 = solution.intToLinkedList(num1);
         ListNode list2 = solution.intToLinkedList(num2);
-        System.out.printf("%s  +  %s\n%s  +  %s\n%s\n\n", num1, num2, list1.toString(), list2.toString(), solution.addTwoNumbersSecondAttempt(list1, list2).toString());
+        System.out.printf(
+                "%s  +  %s\n%s  +  %s\n%s\n\n",
+                num1,
+                num2,
+                list1.toString(),
+                list2.toString(),
+                solution.addTwoNumbersSecondAttempt(list1, list2).toString());
 
         num1 = 342;
         num2 = 465;
         list1 = solution.intToLinkedList(num1);
         list2 = solution.intToLinkedList(num2);
-        System.out.printf("%s  +  %s\n%s  +  %s\n%s\n\n", num1, num2, list1.toString(), list2.toString(), solution.addTwoNumbersSecondAttempt(list1, list2).toString());
+        System.out.printf(
+                "%s  +  %s\n%s  +  %s\n%s\n\n",
+                num1,
+                num2,
+                list1.toString(),
+                list2.toString(),
+                solution.addTwoNumbersSecondAttempt(list1, list2).toString());
 
         num1 = 9999999;
         num2 = 9999;
         list1 = solution.intToLinkedList(num1);
         list2 = solution.intToLinkedList(num2);
-        System.out.printf("%s  +  %s\n%s  +  %s\n%s\n\n", num1, num2, list1.toString(), list2.toString(), solution.addTwoNumbersSecondAttempt(list1, list2).toString());
+        System.out.printf(
+                "%s  +  %s\n%s  +  %s\n%s\n\n",
+                num1,
+                num2,
+                list1.toString(),
+                list2.toString(),
+                solution.addTwoNumbersSecondAttempt(list1, list2).toString());
     }
 }
