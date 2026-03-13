@@ -9,11 +9,11 @@ import java.util.Arrays;
 public class KthLargestElementInArray {
 
     private int getIndexOfLeftChild(int i) {
-        return 2*i + 1;
+        return 2 * i + 1;
     }
 
     private int getIndexOfRightChild(int i) {
-        return 2*i + 2;
+        return 2 * i + 2;
     }
 
     private int popHeap(int[] nums, int i, boolean isMinHeap) {
@@ -24,7 +24,8 @@ public class KthLargestElementInArray {
         int rightChildIndex = getIndexOfRightChild(i);
         // if this is a leaf node
         if (leftChildIndex >= nums.length && rightChildIndex >= nums.length) {
-            // This element would need to be removed, but we are working with a fixed length array of integers
+            // This element would need to be removed, but we are working with a fixed length array
+            // of integers
             // so override the value to infinity
             if (isMinHeap) {
                 nums[i] = Integer.MAX_VALUE;
@@ -45,7 +46,8 @@ public class KthLargestElementInArray {
                 }
             }
         }
-        // replace root node value with the top child's value, then recursively do this down to the leaf nodes
+        // replace root node value with the top child's value, then recursively do this down to the
+        // leaf nodes
         nums[i] = nums[topChildIndex];
         popHeap(nums, topChildIndex, isMinHeap);
         return rootValue;
@@ -95,7 +97,7 @@ public class KthLargestElementInArray {
 
     private void heapify(int[] nums, boolean isMinHeap) {
         System.out.printf("Array: %s\n", Arrays.toString(nums));
-        int lastParentNodeIndex = nums.length/2 - 1;
+        int lastParentNodeIndex = nums.length / 2 - 1;
         for (int i = lastParentNodeIndex; i >= 0; i--) {
             heapifyDown(nums, i, isMinHeap);
         }
@@ -151,17 +153,26 @@ public class KthLargestElementInArray {
         KthLargestElementInArray solution = new KthLargestElementInArray();
         int[] nums = {50, 30, 40, 15, 100, 20, 25, 99};
         int k = 5;
-        System.out.printf("%s largest element: %s\n\n", k, solution.findKthLargestAttemptTwo(nums, k));
-        // System.out.printf("%s largest element: %s\n\n", k, solution.findKthLargestAttemptOne(nums, k));
+        System.out.printf(
+                "%s largest element: %s\n\n", k, solution.findKthLargestAttemptTwo(nums, k));
+        // System.out.printf("%s largest element: %s\n\n", k,
+        // solution.findKthLargestAttemptOne(nums,
+        // k));
 
-        nums = new int[]{1};
+        nums = new int[] {1};
         k = 1;
-        // System.out.printf("%s largest element: %s\n\n", k, solution.findKthLargestAttemptOne(nums, k));
-        System.out.printf("%s largest element: %s\n\n", k, solution.findKthLargestAttemptTwo(nums, k));
+        // System.out.printf("%s largest element: %s\n\n", k,
+        // solution.findKthLargestAttemptOne(nums,
+        // k));
+        System.out.printf(
+                "%s largest element: %s\n\n", k, solution.findKthLargestAttemptTwo(nums, k));
 
-        nums = new int[]{3,6};
+        nums = new int[] {3, 6};
         k = 2;
-        System.out.printf("%s largest element: %s\n\n", k, solution.findKthLargestAttemptTwo(nums, k));
-        // System.out.printf("%s largest element: %s\n\n", k, solution.findKthLargestAttemptOne(nums, k));
+        System.out.printf(
+                "%s largest element: %s\n\n", k, solution.findKthLargestAttemptTwo(nums, k));
+        // System.out.printf("%s largest element: %s\n\n", k,
+        // solution.findKthLargestAttemptOne(nums,
+        // k));
     }
 }
